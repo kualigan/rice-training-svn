@@ -300,7 +300,23 @@
     </profile>
   </profiles>
 
-  <dependencies>
+	<dependencies>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<version>9.1.1.v20140108</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-webapp</artifactId>
+			<version>9.1.1.v20140108</version>
+		</dependency>
+          <dependency>
+            <groupId>${database.groupId}</groupId>
+            <artifactId>${database.artifactId}</artifactId>
+            <version>${database.version}</version>
+            <scope>test</scope>
+          </dependency>
 
     <!--
       Kuali Rice libraries
