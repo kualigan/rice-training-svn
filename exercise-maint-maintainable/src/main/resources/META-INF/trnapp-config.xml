@@ -41,7 +41,7 @@ in configuration files outside of the project.
   <param name="application.id">trnapp</param>
   <param name="app.context.name">trnapp</param>
 
-  <param name="filter.login.class">org.kuali.rice.krad.web.filter.DummyLoginFilter</param>
+  <param name="filter.login.class">org.kuali.rice.krad.web.f	ilter.DummyLoginFilter</param>
   <param name="filtermapping.login.1">/*</param>
 
   <param name="dev.mode">true</param>
@@ -57,5 +57,5 @@ in configuration files outside of the project.
   <param name="config.location">classpath:META-INF/common-config-defaults.xml</param>
   <param name="config.location">classpath:META-INF/common-config-locations.xml</param>
   <param name="config.location">${alt.config.location}</param>
-  <param name="version">samplerice :: ${project.version} :: ${kuali.build.timestamp}</param>
+  <param name="version">trnapp :: ${project.version} :: ${kuali.build.timestamp}</param>
 </config>

@@ -40,12 +40,12 @@
 -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>trnapp-group-id</groupId>
-	<artifactId>trnapp</artifactId>
-	<packaging>war</packaging>
-	<name>trnapp</name>
-	<version>0.1-SNAPSHOT</version>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>trnapp-group-id</groupId>
+    <artifactId>trnapp</artifactId>
+    <packaging>war</packaging>
+    <name>trnapp</name>
+    <version>0.1-SNAPSHOT</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -175,7 +175,7 @@
         <version>${plugin.jetty.version}</version>
         <configuration>
           <webAppConfig>
-            <contextPath>/samplerice</contextPath>
+            <contextPath>/trnapp</contextPath>
           </webAppConfig>
           <connectors>
             <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
@@ -256,7 +256,7 @@
             <version>${plugin.jetty.version}</version>
             <configuration>
               <webAppConfig>
-                <contextPath>/samplerice</contextPath>
+                <contextPath>/trnapp</contextPath>
               </webAppConfig>
               <connectors>
                 <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
