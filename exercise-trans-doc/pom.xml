@@ -317,6 +317,11 @@
             <version>${database.version}</version>
             <scope>test</scope>
           </dependency>
+    <dependency>
+      <groupId>org.kuali.rice</groupId>
+      <artifactId>rice-kns</artifactId>
+      <version>${rice.version}</version>
+    </dependency>
 
     <!--
       Kuali Rice libraries
