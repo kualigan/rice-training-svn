@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<descriptor-repository version="1.0">
+  <class-descriptor class="trnapp.bookstore.department.Department" table="dept_t">
+    <field-descriptor name="code" column="dept_cd" jdbc-type="VARCHAR" primarykey="true" />
+    <field-descriptor name="name" column="dept_nm" jdbc-type="VARCHAR" />
+    <field-descriptor name="parentCode" column="parnt_dept_cd" jdbc-type="VARCHAR" />
+    <field-descriptor name="departmentHeadPrincipalId" column="dept_hd_prncpl_id" jdbc-type="VARCHAR" />    
+    <field-descriptor name="objectId" column="obj_id" jdbc-type="VARCHAR" index="true" />
+    <field-descriptor name="versionNumber" column="ver_nbr" jdbc-type="BIGINT" locking="true" />
+  </class-descriptor>
+</descriptor-repository>
