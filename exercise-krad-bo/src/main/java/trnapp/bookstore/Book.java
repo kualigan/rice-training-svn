@@ -11,13 +11,12 @@ public class Book extends PersistableBusinessObjectBase {
 
 	private Long id;
 	private String title;
-	private Long authorId;
 	private String category;
 	private String isbn;
 	private String publisher;
 	private java.sql.Date publicationDate;
 	
-	private Author author;
+	private String author;
 	private List<Chapter> chapters = new ArrayList<Chapter>();
 	
 	public Long getId() {
@@ -33,12 +32,6 @@ public class Book extends PersistableBusinessObjectBase {
 	}
 	public void setTitle(String title) {
 		this.title = title;
-	}
-	public Long getAuthorId() {
-		return authorId;
-	}
-	public void setAuthorId(Long authorId) {
-		this.authorId = authorId;
 	}
 	public String getCategory() {
 		return category;
@@ -64,17 +57,19 @@ public class Book extends PersistableBusinessObjectBase {
 	public void setPublicationDate(java.sql.Date publicationDate) {
 		this.publicationDate = publicationDate;
 	}
-	public Author getAuthor() {
-		return author;
-	}
-	public void setAuthor(Author author) {
-		this.author = author;
-	}
 	public List<Chapter> getChapters() {
 		return chapters;
 	}
 	public void setChapters(List<Chapter> chapters) {
 		this.chapters = chapters;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
 	}	
 	
 }
