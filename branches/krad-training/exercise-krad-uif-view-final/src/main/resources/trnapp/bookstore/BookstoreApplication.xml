@@ -77,7 +77,7 @@
         <bean id="Landing-Details-Row1" parent="Uif-HorizontalBoxGroup">
           <property name="items">
             <list>
-              <bean parent="Uif-Message" p:messageText="@{loggedInUser}"/>
+              <bean parent="Uif-Message" p:messageText=""/>
               <bean id="Landing-AuthorLookup" parent="Landing-FeatureBase"
                     p:headerText="[link='lookup?methodToCall=start&amp;dataObjectClassName=trnapp.bookstore.Author&amp;showMaintenanceLinks=true&amp;returnLocation=/trnapp/portal.do]Author Lookup[/link]"
                     p:instructionalText="Search for all of your favorite authors. Do you like Stephen King? Search for him! Do you like Douglas Adams? You got it!!!"/>
