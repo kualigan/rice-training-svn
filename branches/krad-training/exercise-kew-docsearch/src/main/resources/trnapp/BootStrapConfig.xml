@@ -41,36 +41,21 @@ in configuration files outside of the project.
   <param name="application.id">trnapp</param>
   <param name="app.context.name">trnapp</param>
 
-  <param name="filter.login.class">org.kuali.rice.kew.web.DummyLoginFilter</param>
+  <param name="filter.login.class">org.kuali.rice.krad.web.filter.DummyLoginFilter</param>
   <param name="filtermapping.login.1">/*</param>
 
-  <!--
-    Turn off "development" mode so that services
-    are published to and consumed from the KSB
-  <param name="dev.mode">false</param>
-  -->
-  
   <param name="dev.mode">true</param>
 
       
   <param name="datasource.ojb.platform">MySQL</param>
 
     
-  <param name="datasource.url">jdbc:mysql://localhost:3306/trnrice</param>
-  <param name="datasource.username">trnrice</param>
-  <param name="datasource.password">trnrice</param>
-  
-  <param name="keystore.alias">rice</param>
-  <param name="keystore.file">${user.home}/kuali/main/dev/rice.keystore</param>
-  <param name="keystore.password">r1c3pw</param>
-  
+  <param name="datasource.url">jdbc:mysql://localhost:3306/rice</param>
+  <param name="datasource.username">krad</param>
+  <param name="datasource.password">krad</param>
 
   <param name="config.location">classpath:META-INF/common-config-defaults.xml</param>
   <param name="config.location">classpath:META-INF/common-config-locations.xml</param>
   <param name="config.location">${alt.config.location}</param>
   <param name="version">trnapp :: ${project.version} :: ${kuali.build.timestamp}</param>
-  
-  <param name="mail.smtp.host">localhost</param>
-  <param name="mail.smtp.port">2555</param>
-  
 </config>
