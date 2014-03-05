@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?> 
+<data xmlns="ns:workflow" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ns:workflow resource:WorkflowData">
+	<ruleTemplates xmlns="ns:workflow/RuleTemplate"
+		xsi:schemaLocation="ns:workflow/RuleTemplate resource:RuleTemplate">
+		<ruleTemplate>
+			<name>SimpleRuleTemplate</name>
+			<description>A simple rule template with no routing attributes.
+			</description>
+		</ruleTemplate>
+	</ruleTemplates>
+  <documentTypes xmlns="ns:workflow/DocumentType" xsi:schemaLocation="ns:workflow/DocumentType resource:DocumentType">
+    <documentType>
+      <name>BookDocumentType</name>
+      <parent>RiceDocument</parent>
+      <label>Book</label>
+    </documentType>
+  </documentTypes>
+</data>
