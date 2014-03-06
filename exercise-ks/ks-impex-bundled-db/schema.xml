@@ -8983,9 +8983,6 @@
         </index>
         <index name="KRSB_MSG_QUE_TI2">
             <column>APPL_ID</column>
-            <column>STAT_CD</column>
-            <column>IP_NBR</column>
-            <column>DT</column>
         </index>
     </table>
     <table name="KRSB_QRTZ_BLOB_TRIGGERS">
