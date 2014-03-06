@@ -3158,13 +3158,9 @@
         </column>
         <index name="KREW_DOC_HDR_EXT_DT_TI1">
             <column>KEY_CD</column>
-            <column>VAL</column>
         </index>
         <index name="KREW_DOC_HDR_EXT_DT_TI2">
             <column>DOC_HDR_ID</column>
-        </index>
-        <index name="KREW_DOC_HDR_EXT_DT_TI3">
-            <column>VAL</column>
         </index>
     </table>
     <table name="KREW_DOC_HDR_EXT_FLT_T">
