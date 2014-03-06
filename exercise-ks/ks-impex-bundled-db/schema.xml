@@ -3967,14 +3967,9 @@
         </column>
         <index name="KREW_RTE_BRCH_ST_TI1">
             <column>RTE_BRCH_ID</column>
-            <column>KEY_CD</column>
-        </index>
-        <index name="KREW_RTE_BRCH_ST_TI2">
-            <column>RTE_BRCH_ID</column>
         </index>
         <index name="KREW_RTE_BRCH_ST_TI3">
             <column>KEY_CD</column>
-            <column>VAL</column>
         </index>
     </table>
     <table name="KREW_RTE_BRCH_T">
