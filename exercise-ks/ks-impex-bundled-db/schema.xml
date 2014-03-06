@@ -3151,7 +3151,7 @@
             <size value="40"/>
         </column>
         <column name="KEY_CD" nullable="false" type="STRING">
-            <size value="256"/>
+            <size value="255"/>
         </column>
         <column name="VAL" type="DATE">
             <size value="7"/>
@@ -3171,7 +3171,7 @@
             <size value="40"/>
         </column>
         <column name="KEY_CD" nullable="false" type="STRING">
-            <size value="256"/>
+            <size value="255"/>
         </column>
         <column name="VAL" type="FLOAT">
             <size scale="15" scaleSet="true" value="30"/>
@@ -3195,7 +3195,7 @@
             <size value="40"/>
         </column>
         <column name="KEY_CD" nullable="false" type="STRING">
-            <size value="256"/>
+            <size value="255"/>
         </column>
         <column name="VAL" type="FLOAT">
             <size value="22"/>
@@ -3219,7 +3219,7 @@
             <size value="40"/>
         </column>
         <column name="KEY_CD" nullable="false" type="STRING">
-            <size value="256"/>
+            <size value="255" />
         </column>
         <column name="VAL" type="STRING">
             <size value="2000"/>
@@ -4256,7 +4256,7 @@
             <size value="40"/>
         </column>
         <column name="TYP" nullable="false" type="STRING">
-            <size value="256"/>
+            <size value="255"/>
         </column>
         <column name="VER_NBR" type="FLOAT">
             <defaultValue>0
@@ -4387,7 +4387,7 @@
             <size value="7"/>
         </column>
         <column name="NM" type="STRING">
-            <size value="256"/>
+            <size value="255"/>
         </column>
         <column name="OBJ_ID" nullable="false" type="STRING">
             <size value="36"/>
