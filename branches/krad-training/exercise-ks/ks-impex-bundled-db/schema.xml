@@ -3230,13 +3230,9 @@
         </column>
         <index name="KREW_DOC_HDR_EXT_TI1">
             <column>KEY_CD</column>
-            <column>VAL</column>
         </index>
         <index name="KREW_DOC_HDR_EXT_TI2">
             <column>DOC_HDR_ID</column>
-        </index>
-        <index name="KREW_DOC_HDR_EXT_TI3">
-            <column>VAL</column>
         </index>
     </table>
     <table name="KREW_DOC_HDR_T">
@@ -4087,7 +4083,6 @@
         </index>
         <index name="KREW_RTE_NODE_INSTN_ST_TI3">
             <column>KEY_CD</column>
-            <column>VAL</column>
         </index>
     </table>
     <table name="KREW_RTE_NODE_INSTN_T">
@@ -4323,7 +4318,6 @@
         </index>
         <index name="KREW_RULE_EXT_VAL_T2">
             <column>RULE_EXT_VAL_ID</column>
-            <column>KEY_CD</column>
         </index>
     </table>
     <table name="KREW_RULE_RSP_T">
@@ -8939,10 +8933,6 @@
         </column>
         <index name="KRSB_BAM_TI1">
             <column>SVC_NM</column>
-            <column>MTHD_NM</column>
-        </index>
-        <index name="KRSB_BAM_TI2">
-            <column>SVC_NM</column>
         </index>
     </table>
     <table name="KRSB_MSG_PYLD_T">
@@ -8999,7 +8989,6 @@
         </column>
         <index name="KRSB_MSG_QUE_TI1">
             <column>SVC_NM</column>
-            <column>SVC_MTHD_NM</column>
         </index>
         <index name="KRSB_MSG_QUE_TI2">
             <column>APPL_ID</column>
