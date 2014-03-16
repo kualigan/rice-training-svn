@@ -566,5 +566,11 @@
       <version>9.1.3.v20140225</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>${database.groupId}</groupId>
+      <artifactId>${database.artifactId}</artifactId>
+      <version>${database.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 </project>
