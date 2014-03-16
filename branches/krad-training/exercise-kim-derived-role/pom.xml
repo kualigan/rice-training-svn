@@ -302,12 +302,6 @@
       with other libraries. The http://maven.apache.org/plugins/maven-dependency-plugin/ does a pretty good job of
       finding these missing dependencies.
     -->
-    <dependency>
-      <groupId>org.kuali.rice</groupId>
-      <artifactId>rice-it-krad</artifactId>
-      <version>${rice.version}</version>
-      <scope>test</scope>
-    </dependency>
     <!-- core -->
     <dependency>
       <groupId>org.kuali.rice</groupId>
@@ -554,6 +548,11 @@
       <artifactId>spring-test</artifactId>
       <version>${spring.version}</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.kuali.rice</groupId>
+      <artifactId>rice-it-krad</artifactId>
+      <version>${rice.version}</version>
     </dependency>
   </dependencies>
 </project>
