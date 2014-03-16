@@ -78,7 +78,7 @@
     <plugin.surefire.version>2.14</plugin.surefire.version>
     <plugin.failsafe.version>2.14</plugin.failsafe.version>
     <plugin.war.version>2.3</plugin.war.version>
-    <plugin.jetty.version>8.1.9.v20130131/</plugin.jetty.version>
+    <plugin.jetty.version>8.1.9.v20130131</plugin.jetty.version>
 
     <!-- other properties -->
     <jetty.port>8080</jetty.port>
