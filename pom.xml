@@ -549,5 +549,34 @@
       <version>${spring.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.kuali.rice</groupId>
+      <artifactId>rice-it-krad</artifactId>
+      <version>${rice.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-server</artifactId>
+      <version>${plugin.jetty.version}</version>
+      <scope>test</scope>
+      <excludes>
+        <exclude>
+          <groupId>org.eclipse.jetty.orbit</groupId>
+          <artifactId>javax.servlet</artifactId>
+        </exclude>
+      </excludes>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.jetty</groupId>
+      <artifactId>jetty-webapp</artifactId>
+      <version>${plugin.jetty.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${database.groupId}</groupId>
+      <artifactId>${database.artifactId}</artifactId>
+      <version>${database.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 </project>

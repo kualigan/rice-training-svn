@@ -5,6 +5,22 @@
       <name>BookDocumentType</name>
       <parent>RiceDocument</parent>
       <label>Book</label>
+      <docHandler>${krad.url}/maintenance?methodToCall=docHandler&amp;dataObjectClassName=trnapp.bookstore.Book</docHandler>
+			<routePaths>
+				<routePath>
+					<start name="AdHoc" nextNode="DepartmentHeadReview" />
+					<requests name="DepartmentHeadReview" />
+				</routePath>
+			</routePaths>
+			<routeNodes>
+				<start name="AdHoc">
+					<activationType>P</activationType>
+				</start>
+				<role name="DepartmentHeadReview">
+					<qualifierResolverClass>org.kuali.rice.kns.workflow.attribute.DataDictionaryQualifierResolver</qualifierResolverClass>
+					<activationType>P</activationType>
+				</role>
+			</routeNodes>
     </documentType>
   </documentTypes>
 </data>
