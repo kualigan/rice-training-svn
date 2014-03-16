@@ -12,7 +12,7 @@ import org.junit.Test;
 import org.kuali.rice.krad.service.BusinessObjectService;
 import org.kuali.rice.krad.service.KRADServiceLocator;
 
-import train.test.BaseTestCase;
+import trnapp.test.BaseTestCase;
 
 /**
  * A JUnit test class for testing the Book Business Object using the
