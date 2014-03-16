@@ -1,4 +1,4 @@
-package train.test;
+package trnapp.test;
 
 import java.util.Map;
 

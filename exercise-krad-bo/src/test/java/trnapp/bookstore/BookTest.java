@@ -1,4 +1,4 @@
-package train.bookstore.bo;
+package trnapp.bookstore;
 
 import java.util.Calendar;
 import java.util.Collection;
