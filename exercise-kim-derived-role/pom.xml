@@ -549,5 +549,11 @@
       <version>${spring.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.kuali.rice</groupId>
+      <artifactId>rice-it-krad</artifactId>
+      <version>${rice.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 </project>
