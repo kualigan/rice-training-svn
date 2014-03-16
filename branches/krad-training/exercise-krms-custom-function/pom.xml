@@ -46,7 +46,7 @@
   <artifactId>trnapp</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
-
+  
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -57,14 +57,14 @@
     
         <!--dependency versions -->
     <jsp-api.version>2.1</jsp-api.version>
-    <junit.version>4.10</junit.version>
     <spring.version>3.1.0.RELEASE</spring.version>
+    <junit.version>4.11</junit.version>
     <oracle.jdbc.version>10.2.0.3.0</oracle.jdbc.version>
     <oracle.jdbc.artifactId>ojdbc14</oracle.jdbc.artifactId>
-    <mysql.jdbc.version>5.1.25</mysql.jdbc.version>
+    <mysql.jdbc.version>5.1.24</mysql.jdbc.version>
     <mysql.jdbc.artifactId>mysql-connector-java</mysql.jdbc.artifactId>
 
-    <rice.version>2.2.1</rice.version>
+    <rice.version>2.3.3</rice.version>
     <jaxb-impl.version>2.2.6</jaxb-impl.version>
     <servlet-api.version>2.5</servlet-api.version>
 
@@ -74,10 +74,10 @@
       more stable and less dependant on a specific version of maven.
     -->
     <plugin.build-helper.version>1.7</plugin.build-helper.version>
-    <plugin.compiler.version>2.5.1</plugin.compiler.version>
-    <plugin.surefire.version>2.12.3</plugin.surefire.version>
-    <plugin.failsafe.version>2.12.3</plugin.failsafe.version>
-    <plugin.war.version>2.2</plugin.war.version>
+    <plugin.compiler.version>3.1</plugin.compiler.version>
+    <plugin.surefire.version>2.14</plugin.surefire.version>
+    <plugin.failsafe.version>2.14</plugin.failsafe.version>
+    <plugin.war.version>2.3</plugin.war.version>
     <plugin.jetty.version>8.1.7.v20120910</plugin.jetty.version>
 
     <!-- other properties -->
@@ -141,20 +141,6 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
         <version>${plugin.build-helper.version}</version>
-        <executions>
-          <execution>
-            <id>add-test-source</id>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>add-test-source</goal>
-            </goals>
-            <configuration>
-              <sources>
-                <source>src/it/java</source>
-              </sources>
-            </configuration>
-          </execution>
-        </executions>
       </plugin>
 
       <!--
@@ -387,6 +373,12 @@
       <version>${rice.version}</version>
       <scope>runtime</scope>
     </dependency>
+    <dependency>
+      <groupId>org.kuali.rice</groupId>
+      <artifactId>rice-kns</artifactId>
+      <version>${rice.version}</version>
+      <scope>runtime</scope>
+    </dependency>
     <!-- ken -->
     <dependency>
       <groupId>org.kuali.rice</groupId>
@@ -557,15 +549,5 @@
       <version>${spring.version}</version>
       <scope>test</scope>
     </dependency>
-    
-    <dependency>
-      <groupId>${database.groupId}</groupId>
-      <artifactId>${database.artifactId}</artifactId>
-      <version>${database.version}</version>
-      <scope>test</scope>
-    </dependency>
-    
-
-
   </dependencies>
 </project>
