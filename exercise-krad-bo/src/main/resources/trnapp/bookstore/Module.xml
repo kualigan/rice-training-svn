@@ -7,14 +7,16 @@
   <bean id="bookstoreModuleConfiguration" class="org.kuali.rice.krad.bo.ModuleConfiguration">
     <property name="namespaceCode" value="bookstore" />
     <property name="databaseRepositoryFilePaths">
+<!--
       <list>
-      	<value>trnapp/bookstore/OJB-repository-bookstore.xml</value>
       </list>
+-->
     </property>
     <property name="packagePrefixes">
+<!--
       <list>
-      	<value>trnapp.bookstore</value>
       </list>
+-->
     </property>
   </bean>
 
