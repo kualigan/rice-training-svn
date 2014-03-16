@@ -321,6 +321,12 @@
       <artifactId>rice-core-impl</artifactId>
       <version>${rice.version}</version>
       <scope>runtime</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.glassfish.web</groupId>
+          <artifactId>jstl-impl</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.kuali.rice</groupId>
