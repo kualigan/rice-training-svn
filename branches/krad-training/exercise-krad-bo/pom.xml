@@ -560,6 +560,7 @@
       <artifactId>rice-it-krad</artifactId>
       <version>${rice.version}</version>
     </dependency>
+    <!--
     <dependency>
       <groupId>org.eclipse.jetty</groupId>
       <artifactId>jetty-server</artifactId>
@@ -572,6 +573,19 @@
       <version>${plugin.jetty.version}</version>
       <scope>test</scope>
     </dependency>
+    -->
+        <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-server</artifactId>
+                <version>7.5.1.v20110908</version>
+                <scope>test</scope>
+        </dependency>
+        <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-webapp</artifactId>
+                <version>7.5.1.v20110908</version>
+                <scope>test</scope>
+        </dependency>
     <dependency>
       <groupId>${database.groupId}</groupId>
       <artifactId>${database.artifactId}</artifactId>
