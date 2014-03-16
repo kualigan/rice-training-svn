@@ -554,5 +554,11 @@
       <artifactId>rice-it-krad</artifactId>
       <version>${rice.version}</version>
     </dependency>
+<dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>jetty-server</artifactId>
+    <version>9.1.3.v20140225</version>
+    <scope>test</scope>
+</dependency>
   </dependencies>
 </project>
