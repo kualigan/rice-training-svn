@@ -1,5 +1,8 @@
 package trnapp.bookstore;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.kuali.rice.krad.bo.PersistableBusinessObjectBase;
 
 public class Book extends PersistableBusinessObjectBase {
@@ -15,6 +18,7 @@ public class Book extends PersistableBusinessObjectBase {
 	private java.sql.Date publicationDate;
 	
 	private Author author;
+	private List<Chapter> chapters = new ArrayList<Chapter>();
 	
 	public Long getId() {
 		return id;
@@ -66,5 +70,11 @@ public class Book extends PersistableBusinessObjectBase {
 	public void setAuthor(Author author) {
 		this.author = author;
 	}
+	public List<Chapter> getChapters() {
+		return chapters;
+	}
+	public void setChapters(List<Chapter> chapters) {
+		this.chapters = chapters;
+	}	
 	
 }
