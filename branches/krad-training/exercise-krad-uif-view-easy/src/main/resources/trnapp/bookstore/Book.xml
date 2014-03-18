@@ -4,197 +4,83 @@
        xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-  <bean id="Book" parent="DataObjectEntry"
-        p:dataObjectClass="trnapp.bookstore.Book"
-        p:titleAttribute="id"
-        p:objectLabel="Book">
-    <property name="attributes">
-      <list>
-        <ref bean="Book-id"/>
-        <ref bean="Book-title"/>
-        <ref bean="Book-authorId"/>
-        <ref bean="Book-author-name"/>
-        <ref bean="Book-category"/>
-        <ref bean="Book-isbn"/>
-        <ref bean="Book-publisher"/>
-        <ref bean="Book-publicationDate"/>
-      </list>
-    </property>
-    <property name="collections">
-      <list>
-        <bean parent="CollectionDefinition"
-              p:name="chapters"
-              p:label="Chapters"
-              p:shortLabel="Chapters"
-              p:elementLabel="Chapter"/>
-      </list>
-</property>
-    
-  </bean>
-
-  <bean id="Book-id" parent="AttributeDefinition"
-        p:name="id"
-        p:label="Book Id"
-        p:shortLabel="Id"
-        p:maxLength="19">
-    <property name="validCharactersConstraint">
-      <bean parent="NumericPatternConstraint"/>
-    </property>
-    <property name="controlField">
-      <bean parent="Uif-TextControl" p:size="30"/>
-    </property>
-  </bean>
-
-  <bean id="Book-title" parent="AttributeDefinition"
-        p:name="title"
-        p:label="Title"
-        p:shortLabel="Title"
-        p:maxLength="256">
-    <property name="validCharactersConstraint">
-      <bean parent="AnyCharacterPatternConstraint" p:allowWhitespace="true"/>
-    </property>
-    <property name="controlField">
-      <bean parent="Uif-TextControl" p:size="50"/>
-    </property>
-  </bean>
-  
-  <bean id="Book-authorId" parent="AttributeDefinition"
-        p:name="authorId"
-        p:label="Author Id"
-        p:shortLabel="Author Id"
-        p:maxLength="19">
-    <property name="validCharactersConstraint">
-      <bean parent="NumericPatternConstraint"/>
-    </property>
-    <property name="controlField">
-      <bean parent="Uif-TextControl" p:size="30"/>
-    </property>
-  </bean>
-  
-  <bean id="Book-author-name" parent="AttributeDefinition"
-        p:name="author.name"
-        p:label="Author Name"
-        p:shortLabel="Author Name">
-    <property name="controlField">
-      <bean parent="Uif-TextControl" p:size="30"/>
-    </property>    
-  </bean>
-  
-  <bean id="Book-category" parent="AttributeDefinition"
-        p:name="category"
-        p:label="Category"
-        p:shortLabel="Category"
-        p:maxLength="32">
-    <property name="validCharactersConstraint">
-      <bean parent="AnyCharacterPatternConstraint" p:allowWhitespace="true"/>
-    </property>
-    <property name="controlField">
-      <bean parent="Uif-TextControl" p:size="30"/>
-    </property>
-  </bean>
-  
-  <bean id="Book-isbn" parent="AttributeDefinition"
-        p:name="isbn"
-        p:label="ISBN"
-        p:shortLabel="ISBN"
-        p:maxLength="17">
-    <property name="validCharactersConstraint">
-      <!-- don't allow whitespace in the ISBN -->
-      <bean parent="AnyCharacterPatternConstraint" p:allowWhitespace="false"/>
-    </property>
-    <property name="controlField">
-      <bean parent="Uif-TextControl" p:size="17"/>
-    </property>
-  </bean>
-  
-  <bean id="Book-publisher" parent="AttributeDefinition"
-        p:name="publisher"
-        p:label="Publisher"
-        p:shortLabel="Publisher"
-        p:maxLength="64">
-    <property name="validCharactersConstraint">
-      <bean parent="AnyCharacterPatternConstraint" p:allowWhitespace="true"/>
-    </property>
-    <property name="controlField">
-      <bean parent="Uif-TextControl" p:size="30"/>
-    </property>
-  </bean>
-    
-  <bean id="Book-publicationDate" parent="AttributeDefinition"
-        p:name="publicationDate"
-        p:label="Publication Date"
-        p:shortLabel="Pub Date"
-        p:maxLength="10">
-    <property name="controlField">
-      <bean parent="Uif-DateControl" p:size="30"/>
-    </property>
-  </bean>
-  
-  <bean id="Book-LookupView" parent="Uif-LookupView">
-    <property name="headerText" value="Book Lookup" />
-    <property name="dataObjectClassName" value="trnapp.bookstore.Book" />
-    <property name="viewHelperServiceClass" value="trnapp.bookstore.BookLookupable" />
-    <property name="criteriaFields">
-      <list>
-        <bean parent="Uif-LookupCriteriaInputField" p:propertyName="id" />
-        <bean parent="Uif-LookupCriteriaInputField" p:propertyName="title" />
-        <bean parent="Uif-LookupCriteriaInputField" p:propertyName="authorId" />
-        <bean parent="Uif-LookupCriteriaInputField" p:propertyName="category" />
-        <bean parent="Uif-LookupCriteriaInputField" p:propertyName="isbn" />
-        <bean parent="Uif-LookupCriteriaInputField" p:propertyName="publisher" />
-        <bean parent="Uif-LookupCriteriaInputField" p:propertyName="publicationDate" />
-      </list>
-    </property>
-    <property name="resultFields">
-      <list>
-        <bean parent="Uif-InputField" p:propertyName="id" />
-        <bean parent="Uif-InputField" p:propertyName="title" />
-        <bean parent="Uif-InputField" p:propertyName="author.name" />
-        <bean parent="Uif-InputField" p:propertyName="category" />
-        <bean parent="Uif-InputField" p:propertyName="isbn" />
-      </list>
-    </property>
-  </bean>
-  
-  <bean id="Book-InquiryView" parent="Uif-InquiryView">
-    <property name="headerText" value="Book Inquiry"/>
-    <property name="dataObjectClassName" value="trnapp.bookstore.Book"/>
-    <property name="items">
-      <list>
-        <bean id="Book-Information-Section" parent="Uif-Disclosure-GridSection">
-          <property name="headerText" value="Book Information"/>
-          <property name="items">
-            <list>
-              <bean parent="Uif-InputField" p:propertyName="id" />
-              <bean parent="Uif-InputField" p:propertyName="title" />
-              <bean parent="Uif-InputField" p:propertyName="author.name" />
-              <bean parent="Uif-InputField" p:propertyName="isbn" />
-              <bean parent="Uif-InputField" p:propertyName="category" />      
-            </list>
-          </property>
-        </bean>
-        <bean id="Book-PublishingInformation-Section" parent="Uif-Disclosure-GridSection">
-          <property name="headerText" value="Publishing Information"/>
-          <property name="items">
-            <list>
-              <bean parent="Uif-InputField" p:propertyName="publisher" />
-              <bean parent="Uif-InputField" p:propertyName="publicationDate" />
-            </list>
-          </property>
-        </bean> 
-        <bean id="Book-Chapter-Section" parent="Uif-Disclosure-StackedCollectionSection">
-          <property name="headerText" value="Chapters"/>
-          <property name="collectionObjectClass" value="trnapp.bookstore.Chapter"/>
-          <property name="propertyName" value="chapters"/>
-          <property name="items">
-            <list>
-              <bean parent="Uif-InputField" p:propertyName="number"/>
-              <bean parent="Uif-InputField" p:propertyName="title"/>
-            </list>
-          </property>
-        </bean>               
-      </list>
-    </property>
-  </bean>
-
+	<bean id="Book" parent="Book-parentBean" />
+	
+	<bean id="Book-parentBean" abstract="true" parent="DataObjectEntry"
+		p:titleAttribute="id"
+		p:objectLabel="Book"
+		p:dataObjectClass="trnapp.bookstore.Book">
+		<property name="attributes">
+			<list>
+				<ref bean="Book-id" />
+				<ref bean="Book-title" />
+				<ref bean="Book-authorId" />
+				<ref bean="Book-category" />
+				<ref bean="Book-isbn" />
+				<ref bean="Book-publisher" />
+				<ref bean="Book-publicationDate" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="Book-id" parent="Book-id-parentBean" />
+	<bean id="Book-id-parentBean" abstract="true" parent="AttributeReference-genericSystemId" 
+		p:summary="Book Id"
+		p:label="Book Id"
+		p:shortLabel="Id"
+		p:name="id" />
+		
+	<bean id="Book-title" parent="Book-title-parentBean" />
+	<bean id="Book-title-parentBean" abstract="true" parent="AttributeDefinition"
+		p:summary="Book Title"
+		p:label="Book Title"
+		p:shortLabel="Title"
+		p:name="title"
+		p:maxLength="256">
+		<property name="validationPattern">
+			<bean parent="AnyCharacterValidationPattern" />
+		</property>
+		<property name="controlField">
+			<bean parent="Uif-TextControl" p:size="12" />
+		</property>
+	</bean>
+	
+	<bean id="Book-authorId" parent="Book-authorId-parentBean" />
+	<bean id="Book-authorId-parentBean" abstract="true" parent="Author-id" 
+		p:name="authorId" />
+		
+	<bean id="Book-category" parent="Book-category-parentBean" />
+	<bean id="Book-category-parentBean" abstract="true" parent="Book-title-parentBean" 
+		p:summary="Book Category"
+		p:label="Book Category"
+		p:shortLabel="Category"
+		p:name="category"
+		p:maxLength="32" />
+		
+	<bean id="Book-isbn" parent="Book-isbn-parentBean" />
+	<bean id="Book-isbn-parentBean" abstract="true" parent="Book-title-parentBean"
+		p:summary="Book ISBN"
+		p:label="Book ISBN"
+		p:shortLabel="ISBN"
+		p:name="isbn"
+		p:maxLength="17" />
+		
+	<bean id="Book-publisher" parent="Book-publisher-parentBean" />
+	<bean id="Book-publisher-parentBean" abstract="true" parent="Book-title-parentBean"
+		p:summary="Book Publisher"
+		p:label="Book Publisher"
+		p:shortLabel="Publisher"
+		p:name="publisher"
+		p:maxLength="64" />
+	
+	<bean id="Book-publicationDate" parent="Book-publicationDate-parentBean" />
+	<bean id="Book-publicationDate-parentBean" abstract="true" parent="AttributeReference-genericDate"
+	 	p:summary="Book Publication Date"
+		p:label="Publication Date"
+		p:shortLabel="Pub Date"
+		p:name="publicationDate">
+		<property name="controlField">
+			<bean parent="Uif-DateControl" />
+		</property>
+	</bean>
 </beans>
