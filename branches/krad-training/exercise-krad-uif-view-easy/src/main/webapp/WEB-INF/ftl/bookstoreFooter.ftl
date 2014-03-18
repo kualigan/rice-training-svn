@@ -1,4 +1,5 @@
 <#macro bookstore_footer group>
+    </div> <!-- /container -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
