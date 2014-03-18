@@ -69,5 +69,46 @@
       <bean parent="Uif-TextControl" p:size="30"/>
     </property>
   </bean>
+    
+  <bean id="Author-LookupView" parent="Uif-LookupView">
+    <property name="headerText" value="Author Lookup" />
+    <property name="dataObjectClassName" value="trnapp.bookstore.Author" />
+    <property name="criteriaFields">
+      <list>
+        <bean parent="Uif-LookupCriteriaInputField" p:propertyName="id" />
+        <bean parent="Uif-LookupCriteriaInputField" p:propertyName="firstName" />
+        <bean parent="Uif-LookupCriteriaInputField" p:propertyName="middleName" />
+        <bean parent="Uif-LookupCriteriaInputField" p:propertyName="lastName" />
+      </list>
+    </property>
+    <property name="resultFields">
+      <list>
+        <bean parent="Uif-InputField" p:propertyName="id" />
+        <bean parent="Uif-InputField" p:propertyName="firstName" />
+        <bean parent="Uif-InputField" p:propertyName="middleName" />
+        <bean parent="Uif-InputField" p:propertyName="lastName" />
+      </list>
+    </property>
+  </bean>
+  
+  <bean id="Author-InquiryView" parent="Uif-InquiryView">
+    <property name="headerText" value="Author Inquiry"/>
+    <property name="dataObjectClassName" value="trnapp.bookstore.Author"/>
+    <property name="items">
+      <list>
+        <bean id="Author-Information-Section" parent="Uif-Disclosure-GridSection">
+          <property name="headerText" value="Author Information"/>
+          <property name="items">
+            <list>
+              <bean parent="Uif-InputField" p:propertyName="id"/>
+              <bean parent="Uif-InputField" p:propertyName="firstName"/>
+              <bean parent="Uif-InputField" p:propertyName="middleName"/>
+              <bean parent="Uif-InputField" p:propertyName="lastName"/>
+            </list>
+          </property>
+        </bean>
+      </list>
+    </property>
+  </bean>
 
 </beans>
