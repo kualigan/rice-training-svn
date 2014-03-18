@@ -40,10 +40,10 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a
-    href="kr/lookup.do?methodToCall=start&businessObjectClassName=trnapp.bookstore.Author&docFormKey=88888888&">Author
-    Lookup</a></li> 
+	href="../lookup?methodToCall=start&dataObjectClassName=trnapp.bookstore.Author&docFormKey=88888888&">Author
+    Lookup</a></li>
 <li><a
-    href="kr/lookup.do?methodToCall=start&businessObjectClassName=trnapp.bookstore.Book&docFormKey=88888888&">Book
+    href="../lookup?methodToCall=start&dataObjectClassName=trnapp.bookstore.Book&docFormKey=88888888&">Book
     Lookup</a></li>
    
                </ul>
