@@ -310,6 +310,10 @@ This file contains custom application specific web.xml content.
   <servlet>
     <servlet-name>krad</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+    	<param-name>contextConfigLocation</param-name>
+    	<param-value>WEB-INF/krad-servlet.xml,WEB-INF/trnapp-servlet.xml</param-value>
+    </init-param>
     <load-on-startup>3</load-on-startup>
   </servlet>
 
