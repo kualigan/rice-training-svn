@@ -36,4 +36,9 @@ public class Author extends PersistableBusinessObjectBase {
 		this.lastName = lastName;
 	}
 	
+	public String getName() {
+		return firstName + 
+				middleName != null ? " " + middleName : ""  
+						+ " " + lastName;
+	}	
 }
