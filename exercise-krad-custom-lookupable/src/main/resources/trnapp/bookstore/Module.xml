@@ -10,6 +10,7 @@
           <list>
             <value>classpath:trnapp/bookstore/Author.xml</value>
             <value>classpath:trnapp/bookstore/Book.xml</value>
+            <value>classpath:trnapp/bookstore/BookstoreApplication.xml</value>
           </list>
         </property>
     
