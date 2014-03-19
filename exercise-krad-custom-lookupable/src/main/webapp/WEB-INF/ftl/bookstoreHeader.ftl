@@ -40,9 +40,13 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a
-    href="kr/lookup.do?methodToCall=start&businessObjectClassName=trnapp.bookstore.Book&docFormKey=88888888&>Book
+    href="kr/lookup.do?methodToCall=start&businessObjectClassName=trnapp.bookstore.Author&docFormKey=88888888&">Author
     Lookup</a></li> 
-              </ul>
+<li><a
+    href="kr/lookup.do?methodToCall=start&businessObjectClassName=trnapp.bookstore.Book&docFormKey=88888888&">Book
+    Lookup</a></li>
+   
+               </ul>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -55,18 +59,6 @@
     </div>
 
     <div class="container">
-
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
-      </div>
-
-    </div> <!-- /container -->
 
 
 </#macro>

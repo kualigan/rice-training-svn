@@ -36,15 +36,4 @@ public class Author extends PersistableBusinessObjectBase {
 		this.lastName = lastName;
 	}
 	
-	public String getName() {
-	    StringBuilder builder = new StringBuilder();
-	    builder.append(lastName).append(", ");
-	    builder.append(firstName);
-	    if (middleName != null && !"".equals(middleName.trim())) {
-	        builder.append(" ").append(middleName);
-	    }
-	    return builder.toString();
-	}
-
-	
 }
