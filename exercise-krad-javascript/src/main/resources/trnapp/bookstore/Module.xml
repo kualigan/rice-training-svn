@@ -31,4 +31,14 @@
     <bean id="bookstoreModuleService" class="org.kuali.rice.krad.service.impl.ModuleServiceBase">
         <property name="moduleConfiguration" ref="bookstoreModuleConfiguration" />
     </bean>
+
+    <bean id="coverService" class="trnapp.bookstore.CoreServiceImpl" />
+
+    <bean id="CoverService" class="org.kuali.rice.ksb.api.bus.support.RestServiceDefinition">
+      <property name="serviceNameSpaceURI" value="TRNAPP"/>
+      <property name="service" ref="coverService"/>
+      <property name="resourceClass"
+                value="trnapp.bookstore.CoverServiceImpl"/>
+      <property name="localServiceName" value="coverService"/>
+    </bean>
 </beans>
