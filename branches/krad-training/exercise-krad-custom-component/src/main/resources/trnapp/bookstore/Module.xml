@@ -31,4 +31,5 @@
     <bean id="bookstoreModuleService" class="org.kuali.rice.krad.service.impl.ModuleServiceBase">
         <property name="moduleConfiguration" ref="bookstoreModuleConfiguration" />
     </bean>
+
 </beans>
