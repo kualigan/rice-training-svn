@@ -18,7 +18,7 @@
 	  <ol class="carousel-indicators">
 	  	<#list items as item>
 	    <li data-target="#lookup-results-coverflow" data-slide-to="${x_index + 1}"></li>
-	    <#list>
+	    </#list>
 	  </ol>
 	
 	  <!-- Wrapper for slides -->
@@ -29,7 +29,7 @@
 	      <div class="carousel-caption">
 	      </div>
 	    </div>
-	    <#list>
+	    </#list>
 	  </div>
 	
 	  <!-- Controls -->
