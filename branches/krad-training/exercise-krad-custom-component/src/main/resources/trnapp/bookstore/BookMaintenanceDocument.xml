@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:dd="http://rice.kuali.org/dd"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+                           
+	<bean id="BookMaintenanceDocument" parent="uifMaintenanceDocumentEntry"
+		p:dataObjectClass="trnapp.bookstore.Book"
+		p:documentTypeName="BookDocumentType"
+		p:lockingKeys="id"
+	/>
+	
+	<bean id="Book-MaintenanceView" parent="Uif-MaintenanceView"
+		p:dataObjectClassName="trnapp.bookstore.Book"
+		p:headerText="Book Maintenace">
+		<property name="additionalScriptFiles">
+			<list>
+				<value>scripts/custom.js</value>
+			</list>
+		</property>
+		<property name="items">
+			<list merge="true">
+				<bean parent="Uif-MaintenanceGridSection">
+					<property name="headerText" value="Add/Edit Book" />
+					<property name="items">
+						<list>
+							<!--
+							repeat(jQuery("[name='document.newMaintainableObject.dataObject.title']").value() )
+							 -->
+							<bean parent="Uif-InputField" p:propertyName="title" p:required="true"
+								p:onKeyUpScript="repeat(jQuery(&quot;[name=&apos;document.newMaintainableObject.dataObject.title&apos;]&quot;).val())" />
+							<bean parent="Uif-InputField" p:propertyName="authorId" p:required="true"/>
+							<bean parent="Uif-InputField" p:propertyName="category" />
+							<bean parent="Uif-InputField" p:propertyName="isbn"/>
+						</list>
+					</property>
+				</bean>
+				<bean parent="Uif-MaintenanceGridSection"
+					p:render="false"
+					p:progressiveRender="@{document.newMaintainableObject.dataObject.isbn != null and document.newMaintainableObject.dataObject.isbn ne ''}">
+					<property name="headerText" value="Add/Edit Publishing Information" />
+					<property name="items">
+						<list>
+							<bean parent="Uif-InputField" p:propertyName="publisher">
+								<property name="dependencyConstraints">
+									<list>
+										<bean parent="PrerequisiteConstraint" p:propertyName="publicationDate"/>
+									</list>
+								</property>
+							</bean>
+							<bean parent="Uif-InputField" p:propertyName="publicationDate"  p:render="false"
+								p:progressiveRender="@{document.newMaintainableObject.dataObject.publisher != null and document.newMaintainableObject.dataObject.publisher ne ''}"/>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+                           
+</beans>
