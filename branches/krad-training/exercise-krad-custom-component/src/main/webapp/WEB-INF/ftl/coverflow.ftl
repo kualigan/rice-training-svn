@@ -2,8 +2,8 @@
 
     <@krad.groupWrap group=group>
     	<#local items=group.items />
-    	<#local manager="group.layoutManager" />
- 		<#local container="group" />
+    	<#local manager=group.layoutManager />
+ 		<#local container=group />
  		
  		<#if manager.styleClassesAsString?has_content>
         	<#local styleClass="class=\"${manager.styleClassesAsString}\""/>
@@ -16,20 +16,20 @@
 	<div id="lookup-results-coverflow" class="carousel slide" data-ride="carousel">
 	  <!-- Indicators -->
 	  <ol class="carousel-indicators">
-	    <li data-target="#lookup-results-coverflow" data-slide-to="0" class="active"></li>
-	    <li data-target="#lookup-results-coverflow" data-slide-to="1"></li>
-	    <li data-target="#lookup-results-coverflow" data-slide-to="2"></li>
+	  	<#list items as item>
+	    <li data-target="#lookup-results-coverflow" data-slide-to="${x_index + 1}"></li>
+	    <#list>
 	  </ol>
 	
 	  <!-- Wrapper for slides -->
 	  <div class="carousel-inner">
+	  	<#list items as item>
 	    <div class="item active">
 	      <img src="..." alt="...">
 	      <div class="carousel-caption">
-	        ...
 	      </div>
 	    </div>
-	    ...
+	    <#list>
 	  </div>
 	
 	  <!-- Controls -->
