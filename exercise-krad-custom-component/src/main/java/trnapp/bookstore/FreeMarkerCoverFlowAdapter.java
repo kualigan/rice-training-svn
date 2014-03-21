@@ -17,12 +17,38 @@ package trnapp.bookstore;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.io.Writer;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.kuali.rice.krad.uif.container.CollectionGroup;
 
+import org.apache.commons.lang.StringEscapeUtils;
+import org.kuali.rice.krad.uif.UifConstants;
+import org.kuali.rice.krad.uif.component.Component;
+import org.kuali.rice.krad.uif.component.ComponentBase;
+import org.kuali.rice.krad.uif.container.CollectionGroup;
+import org.kuali.rice.krad.uif.container.Group;
+import org.kuali.rice.krad.uif.layout.LayoutManager;
+import org.kuali.rice.krad.uif.layout.StackedLayoutManager;
+import org.kuali.rice.krad.uif.widget.Disclosure;
+import org.kuali.rice.krad.uif.widget.Pager;
+import org.kuali.rice.krad.uif.widget.Tooltip;
+import org.springframework.util.StringUtils;
+
 import freemarker.core.Environment;
 import freemarker.core.InlineTemplateAdaptor;
+import freemarker.core.InlineTemplateUtils;
+import freemarker.core.Macro;
+import freemarker.ext.beans.BeansWrapper;
+import freemarker.template.ObjectWrapper;
 import freemarker.template.TemplateException;
+import freemarker.template.TemplateModel;
+import freemarker.template.TemplateModelException;
+
+import org.kuali.rice.krad.uif.freemarker.FreeMarkerInlineRenderUtils;
 
 /**
  * Inline FreeMarker template adaptor for supporting collectionGroup.ftl 
@@ -39,7 +65,11 @@ public class FreeMarkerCoverFlowAdapter implements InlineTemplateAdaptor, Serial
      */
     @Override
     public void accept(Environment env) throws TemplateException, IOException {
-        final CollectionGroup group = FreeMarkerInlineRenderUtils.resolve(env, "coverFlow", CollectionGroup.class);
-        FreeMarkerInlineRenderUtils.renderCollectionGroup(env, group);
-    }
+        final CollectionGroup group = FreeMarkerInlineRenderUtils.resolve(env, "group", CollectionGroup.class);
+
+        final Macro fmMacro = (Macro) env.getMainNamespace().get("coverFlow");
+        final Map<String, Object> args = new java.util.HashMap<String, Object>();
+        args.put("group", group);
+        InlineTemplateUtils.invokeMacro(env, fmMacro, args, null); 
+   }
 }

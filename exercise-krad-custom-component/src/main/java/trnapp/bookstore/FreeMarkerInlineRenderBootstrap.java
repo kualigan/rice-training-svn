@@ -33,7 +33,7 @@ public class FreeMarkerInlineRenderBootstrap implements InitializingBean {
      */
     @Override
     public void afterPropertiesSet() throws Exception {
-        InlineTemplateElement.registerAdaptor("coverFlow", new FreeMarkerCoverFlowAdaptor());
+        InlineTemplateElement.registerAdaptor("coverFlow", new FreeMarkerCoverFlowAdapter());
     }
 
 }
