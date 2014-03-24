@@ -1,10 +1,8 @@
-<#macro coverFlow items manager container>
-<#--
+<#macro group>
     <@krad.groupWrap group=group>
     	<#local items=group.items />
     	<#local manager=group.layoutManager />
  		<#local container=group />
--->
  		
  		<#if manager.styleClassesAsString?has_content>
         	<#local styleClass="class=\"${manager.styleClassesAsString}\""/>

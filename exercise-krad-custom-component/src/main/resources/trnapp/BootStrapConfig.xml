@@ -60,7 +60,4 @@ in configuration files outside of the project.
   <param name="config.location">${alt.config.location}</param>
   <param name="version">trnapp :: ${project.version} :: ${kuali.build.timestamp}</param>
 
-	<!-- add this param -->
-	<!-- NOTE: the path for the spring file changed for Rice 2.3! Don't copy/paste 
-		this for earlier versions -->
 </config>
