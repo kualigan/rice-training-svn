@@ -7,12 +7,13 @@
   <bean id="BookstoreView" abstract="true" parent="Uif-FormView">
     <property name="additionalCssFiles">
       <list>
-        <value>css/bookstore.css</value>
+        <value>http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css</value>
+        <value>http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css</value>
       </list>
     </property>
     <property name="additionalScriptFiles">
       <list>
-        <value>scripts/bookstore.js</value>
+        <value>http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js</value>
       </list>
     </property>
     <property name="applicationHeader" ref="BookstoreHeader"/>
@@ -36,7 +37,19 @@
       <bean id="LandingPage" parent="Uif-Page">
         <property name="items">
           <list>
-            <!-- put items here -->
+          	<bean parent="Uif-VerticalBoxGroup">
+          		<property name="items">
+          			<list>
+          				<bean parent="Uif-Space" />
+						<bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
+						<bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
+						<bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
+						<bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
+						<bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
+						<bean parent="Uif-Link" p:href="http://www.google.com" p:linkText="Google"/>
+					</list>
+				</property>
+			</bean>
           </list>
         </property>         
       </bean>
