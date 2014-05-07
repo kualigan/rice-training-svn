@@ -1,0 +1,1 @@
+<% response.sendRedirect("kr-krad/bookstore/landing"); %>
