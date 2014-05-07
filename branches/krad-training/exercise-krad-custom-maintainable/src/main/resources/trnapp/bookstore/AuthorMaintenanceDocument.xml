@@ -21,8 +21,8 @@
           <property name="headerText" value="Add/Edit Author"/>
           <property name="items">
             <list>
-              <bean parent="Uif-InputField" p:propertyName="firstName" p:required="true"/>
-              <bean parent="Uif-InputField" p:propertyName="middleName" p:required="false"/>
+      	      <bean parent="Uif-InputField" p:propertyName="firstName" p:required="true"/>
+      	      <bean parent="Uif-InputField" p:propertyName="middleName" />
       	      <bean parent="Uif-InputField" p:propertyName="lastName" p:required="true"/>
             </list>
           </property>

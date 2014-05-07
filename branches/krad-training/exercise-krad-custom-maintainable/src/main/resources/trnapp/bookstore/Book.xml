@@ -20,16 +20,6 @@
         <ref bean="Book-publicationDate"/>
       </list>
     </property>
-    <property name="collections">
-      <list>
-        <bean parent="CollectionDefinition"
-              p:name="chapters"
-              p:label="Chapters"
-              p:shortLabel="Chapters"
-              p:elementLabel="Chapter"/>
-      </list>
-</property>
-    
   </bean>
 
   <bean id="Book-id" parent="AttributeDefinition"
@@ -134,6 +124,7 @@
     <property name="headerText" value="Book Lookup" />
     <property name="dataObjectClassName" value="trnapp.bookstore.Book" />
     <property name="viewHelperServiceClass" value="trnapp.bookstore.BookLookupable" />
+    <property name="showMaintenanceLinks" value="true" />
     <property name="criteriaFields">
       <list>
         <bean parent="Uif-LookupCriteriaInputField" p:propertyName="id" />
@@ -181,18 +172,7 @@
               <bean parent="Uif-InputField" p:propertyName="publicationDate" />
             </list>
           </property>
-        </bean> 
-        <bean id="Book-Chapter-Section" parent="Uif-Disclosure-StackedCollectionSection">
-          <property name="headerText" value="Chapters"/>
-          <property name="collectionObjectClass" value="trnapp.bookstore.Chapter"/>
-          <property name="propertyName" value="chapters"/>
-          <property name="items">
-            <list>
-              <bean parent="Uif-InputField" p:propertyName="number"/>
-              <bean parent="Uif-InputField" p:propertyName="title"/>
-            </list>
-          </property>
-        </bean>               
+        </bean>        
       </list>
     </property>
   </bean>
