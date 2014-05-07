@@ -5,6 +5,7 @@
        xmlns:dd="http://rice.kuali.org/dd"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+                            
 
   <bean id="BookMaintenanceDocument" parent="uifMaintenanceDocumentEntry"
     p:dataObjectClass="trnapp.bookstore.Book"
@@ -18,38 +19,27 @@
       <!-- merge=true because we want to inherit the default sections from our parent MaintenanceView -->
       <list merge="true">
         <bean parent="Uif-MaintenanceGridSection">
-          <property name="headerText" value="Book Information"/>
+          <property name="headerText" value="Add/Edit Book"/>
           <property name="items">
             <list>
-              <bean parent="Uif-InputField" p:propertyName="title" p:required="true"/>
-              <bean parent="Uif-InputField" p:propertyName="authorId" p:required="true"/>
-      	      <bean parent="Uif-InputField" p:propertyName="isbn" p:required="true"/>
-      	      <bean parent="Uif-InputField" p:propertyName="category" p:required="true"/>
+      	      <bean parent="Uif-InputField" p:propertyName="authorId" p:required="true"/>
+      	      <bean parent="Uif-InputField" p:propertyName="title"    p:required="true"/>
+      	      <bean parent="Uif-InputField" p:propertyName="category" />
+      	      <bean parent="Uif-InputField" p:propertyName="isbn"     p:required="true"/>
             </list>
           </property>
         </bean>
         <bean parent="Uif-MaintenanceGridSection">
           <property name="headerText" value="Publishing Information"/>
           <property name="items">
-            <list>
-              <bean parent="Uif-InputField" p:propertyName="publisher" p:required="false"/>
-              <bean parent="Uif-InputField" p:propertyName="publicationDate" p:required="false"/>
-            </list>
-          </property>
-        </bean>
-        <bean parent="Uif-MaintenanceStackedCollectionSection">
-          <property name="headerText" value="Chapters"/>
-          <property name="collectionObjectClass" value="trnapp.bookstore.Chapter"/>
-          <property name="propertyName" value="chapters"/>
-          <property name="items">
-            <list>
-              <bean parent="Uif-InputField" p:propertyName="number" p:required="true"/>
-              <bean parent="Uif-InputField" p:propertyName="title" p:required="true"/>
-            </list>
+          	<list>
+      	      <bean parent="Uif-InputField" p:propertyName="publisher" />
+      	      <bean parent="Uif-InputField" p:propertyName="publicationDate" />
+      	    </list>
           </property>
         </bean>
       </list>
     </property>
-   </bean>
-   
+  </bean>  
+
 </beans>

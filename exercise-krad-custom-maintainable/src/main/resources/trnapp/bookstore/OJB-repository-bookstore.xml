@@ -21,16 +21,6 @@
          auto-update="true">
       <foreignkey field-ref="authorId"/>
     </reference-descriptor>
-    <collection-descriptor name="chapters"
-         element-class-ref="trnapp.bookstore.Chapter"
-         collection-class="org.apache.ojb.broker.util.collections.ManageableArrayList"
-         proxy="true"
-         auto-retrieve="true"
-         auto-update="object"
-         auto-delete="object">
-      <orderby name="number" sort="ASC" />
-      <inverse-foreignkey field-ref="bookId" />
-    </collection-descriptor>    
   </class-descriptor>
   
   <class-descriptor class="trnapp.bookstore.Author" table="author_t">
@@ -43,17 +33,5 @@
     <field-descriptor name="versionNumber" column="ver_nbr" jdbc-type="BIGINT"
                       locking="true" />
   </class-descriptor>
-  
-  <class-descriptor class="trnapp.bookstore.Chapter" table="chapter_t">
-    <field-descriptor name="id" column="chapter_id" jdbc-type="BIGINT"
-                      primarykey="true" autoincrement="true"
-                      sequence-name="chapter_s"/>
-    <field-descriptor name="title" column="title" jdbc-type="VARCHAR" />
-    <field-descriptor name="number" column="number" jdbc-type="INTEGER" />
-    <field-descriptor name="bookId" column="book_id" jdbc-type="BIGINT" />
-    <field-descriptor name="objectId" column="obj_id" jdbc-type="VARCHAR"/>
-    <field-descriptor name="versionNumber" column="ver_nbr" jdbc-type="BIGINT"
-                      locking="true" />
-  </class-descriptor>
-  
+	
 </descriptor-repository>

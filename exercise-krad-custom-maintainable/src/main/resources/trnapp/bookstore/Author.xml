@@ -73,6 +73,7 @@
   <bean id="Author-LookupView" parent="Uif-LookupView">
     <property name="headerText" value="Author Lookup" />
     <property name="dataObjectClassName" value="trnapp.bookstore.Author" />
+    <property name="showMaintenanceLinks" value="true" />
     <property name="criteriaFields">
       <list>
         <bean parent="Uif-LookupCriteriaInputField" p:propertyName="id" />
