@@ -88,4 +88,27 @@
 	<!-- Add the spring beans file for the bookstore module -->
 	<import resource="classpath:trnapp/bookstore/Module.xml"/>
 
+    <!--
+    <bean id="coverService" class="trnapp.bookstore.CoverServiceImpl" />
+    
+    <bean id="CoverService" class="org.kuali.rice.ksb.api.bus.support.RestServiceDefinition">
+      <property name="serviceNameSpaceURI" value="TRNAPP"/>
+      <property name="service" ref="coverService"/>
+      <property name="resourceClass"
+                value="trnapp.bookstore.CoverServiceImpl"/>
+      <property name="localServiceName" value="coverService"/>
+    </bean>
+    
+    
+    <bean class="org.kuali.rice.ksb.api.bus.support.ServiceBusExporter">
+      <property name="serviceBus" ref="rice.ksb.serviceBus"/>
+      <property name="serviceDefinition" ref="CoverService"/>
+    </bean>
+    
+    
+    <bean id="rice.ksb.serviceBus"
+          class="org.kuali.rice.core.framework.resourceloader.GlobalResourceLoaderServiceFactoryBean">
+      <property name="serviceName" value="rice.ksb.serviceBus" />
+    </bean>
+    -->
 </beans>
