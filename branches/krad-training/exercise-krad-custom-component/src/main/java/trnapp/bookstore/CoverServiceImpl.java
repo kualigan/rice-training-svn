@@ -15,8 +15,19 @@
  */
 package trnapp.bookstore;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Test service exposed through REST and connected to a {@link org.kuali.rice.krad.uif.element.DataTable}
@@ -25,6 +36,7 @@ import javax.ws.rs.Path;
  * @author Kuali Rice Team (rice.collab@kuali.org)
  */
 @Path("/")
+@Produces(MediaType.APPLICATION_JSON)
 public class CoverServiceImpl {
 
     /**
@@ -33,10 +45,37 @@ public class CoverServiceImpl {
      * @return String json data string
      */
     @GET
-    @Path("/TableData")
-    public String getTableData() {
-        StringBuilder sb = new StringBuilder();
+    @Path("/Covers")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getTableData() {
+    	    	
+    	return Response.ok(new Results()).build();
+    }
+    
+    @XmlRootElement
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {"covers"})
+    static final class Results {
+    	@XmlElement
+    	protected List<Cover> covers;
+    	
+    	public Results() {
+        	covers = new ArrayList<Cover>();
+        	covers.add(new Cover(1L, "/trnapp/images/cover1.png"));
+        	covers.add(new Cover(2L, "/trnapp/images/cover2.png"));
+        	covers.add(new Cover(3L, "/trnapp/images/cover3.png"));
+        	covers.add(new Cover(4L, "/trnapp/images/cover4.png"));
+        	covers.add(new Cover(5L, "/trnapp/images/cover5.png"));
+        	covers.add(new Cover(6L, "/trnapp/images/cover6.png"));
+    	}
 
-        return sb.toString();
+		public List<Cover> getCovers() {
+			return covers;
+		}
+
+		public void setCovers(List<Cover> covers) {
+			this.covers = covers;
+		}
+    	
     }
 }
