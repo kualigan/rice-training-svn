@@ -20,7 +20,7 @@ import trnapp.test.BaseTestCase;
  * 
  * @author Eric Westfall
  */
-public class BookTest extends BaseTestCase {
+public class BookTest extends BaseITCase {
 
 	private static final Logger LOG = Logger.getLogger(BookTest.class);
 	
