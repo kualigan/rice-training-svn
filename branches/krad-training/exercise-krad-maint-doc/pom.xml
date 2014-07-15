@@ -597,6 +597,12 @@
 		<groupId>org.kuali.rice</groupId>
 		<artifactId>rice-krad-development-tools</artifactId>
 		<version>${rice.version}</version>
+		<exclusions>
+			<exclusion>
+				<groupId>com.sun</groupId>
+				<artifactId>tools</artifactId>
+			</exclusion>
+		</exclusions>
 	</dependency>
   </dependencies>
   
