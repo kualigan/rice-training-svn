@@ -3,19 +3,44 @@
 <#assign homeLink = "landing">
 <#assign oldPortalLink = "/trnapp/portal.do">
 
-<header>
-    <div class="header-container">
-        <div>
-          <div class="header-logo"><#-- image placeholder --></div>
-          <div class="header-title">Bookstore!</div>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
         </div>
-        <nav>
-            <ul>
-                <li><a id="home-link" href="${homeLink}">Home</a></li>
-                <li><a id="old-portal-link" href="${oldPortalLink}">Old Portal</a></li>
-            </ul>
-        </nav>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="../lookup?methodToCall=start&dataObjectClassName=trnapp.bookstore.Book&showMaintenanceLinks=true">Book</a></li>
+                <li><a href="../lookup?methodToCall=start&dataObjectClassName=trnapp.bookstore.Author&showMaintenanceLinks=true">Author</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li class="active"><a href="./">Fixed top</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
-</header>
 
+    <div class="container">
 </#macro>

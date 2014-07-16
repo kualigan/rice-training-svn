@@ -28,8 +28,8 @@
                 <li><a href="#">Something else here</a></li>
                 <li class="divider"></li>
                 <li class="dropdown-header">Nav header</li>
-                <li><a href="../lookup?methodToCall=start&dataObjectClassName=trnapp.bookstore.Book">Book</a></li>
-                <li><a href="../lookup?methodToCall=start&dataObjectClassName=trnapp.bookstore.Author">Author</a></li>
+                <li><a href="../lookup?methodToCall=start&dataObjectClassName=trnapp.bookstore.Book&showMaintenanceLinks=true">Book</a></li>
+                <li><a href="../lookup?methodToCall=start&dataObjectClassName=trnapp.bookstore.Author&showMaintenanceLinks=true">Author</a></li>
               </ul>
             </li>
           </ul>
