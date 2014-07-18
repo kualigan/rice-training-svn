@@ -9,6 +9,8 @@ import org.kuali.rice.kew.api.action.AdHocToPrincipal;
 import org.kuali.rice.kim.api.group.Group;
 import org.kuali.rice.kim.api.services.KimApiServiceLocator;
 
+import trnapp.BaseITCase;
+
 public class Example01Test extends BaseITCase {
 
 	private static final String ADMIN_PID = "admin";

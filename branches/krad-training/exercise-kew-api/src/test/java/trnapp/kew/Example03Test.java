@@ -1,4 +1,4 @@
-package trapp.kew;
+package trnapp.kew;
 
 import java.util.Set;
 
@@ -7,7 +7,6 @@ import org.kuali.rice.kew.api.WorkflowDocument;
 import org.kuali.rice.kew.api.WorkflowDocumentFactory;
 
 import trnapp.BaseITCase;
-
 
 public class Example03Test extends BaseITCase {
 
