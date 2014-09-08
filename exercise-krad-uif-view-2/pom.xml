@@ -64,7 +64,7 @@
     <mysql.jdbc.version>5.1.24</mysql.jdbc.version>
     <mysql.jdbc.artifactId>mysql-connector-java</mysql.jdbc.artifactId>
 
-    <rice.version>2.3.3</rice.version>
+    <rice.version>2.4.2</rice.version>
     <jaxb-impl.version>2.2.6</jaxb-impl.version>
     <servlet-api.version>2.5</servlet-api.version>
 
