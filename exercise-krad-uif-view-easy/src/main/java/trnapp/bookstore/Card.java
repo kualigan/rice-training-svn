@@ -29,13 +29,14 @@ import org.kuali.rice.krad.uif.lifecycle.ViewLifecycleRestriction;
 import org.kuali.rice.krad.uif.util.ComponentFactory;
 import org.kuali.rice.krad.uif.util.LifecycleElement;
 import org.kuali.rice.krad.util.KRADConstants;
+import org.kuali.rice.krad.uif.element.ContentElementBase;
 
 /**
  *
  * @author Kuali Rice Team (rice.collab@kuali.org)
  */
 @BeanTag(name = "card-bean", parent = "Uif-Card")
-public class Label extends ContentElementBase {
+public class Card  extends ContentElementBase {
     private static final long serialVersionUID = -6491546893195180115L;
 
     private String labelText;
@@ -44,23 +45,19 @@ public class Label extends ContentElementBase {
     public Card() {
     }
 
-    /**
-     * Gets the inlineComponents used by index in a Label that has rich message component index tags in its labelText
-     *
-     * @return the Label's inlineComponents
-     */
-    @ViewLifecycleRestriction
-    @BeanTagAttribute(name="inlineComponents",type= BeanTagAttribute.AttributeType.LISTBEAN)
-    public List<Component> getInlineComponents() {
-        return inlineComponents;
+    public void setLabelText(final String labelText) {
+	this.labelText = labelText;
     }
 
-    /**
-     * Sets the inlineComponents used by index in a Label that has rich message component index tags in its labelText
-     *
-     * @param inlineComponents
-     */
-    public void setInlineComponents(List<Component> inlineComponents) {
-        this.inlineComponents = inlineComponents;
+    public String getLabelText() {
+	return labelText;
+    }
+
+    public void setUrl(final String url) {
+	this.url = url;
+    }
+    
+    public String getUrl() {
+	return url;
     }
 }
