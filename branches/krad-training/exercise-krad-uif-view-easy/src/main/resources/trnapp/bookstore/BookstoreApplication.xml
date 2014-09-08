@@ -15,6 +15,7 @@
     <property name="additionalScriptFiles">
       <list>
         <value>http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js</value>
+        <value>scripts/bookstore.js</value>
       </list>
     </property>
     <property name="applicationHeader" ref="BookstoreHeader"/>
