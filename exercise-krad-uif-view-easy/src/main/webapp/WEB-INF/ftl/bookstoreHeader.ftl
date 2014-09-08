@@ -11,16 +11,16 @@
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">Store</a>
+            <a href="?active=Store">Store</a>
           </li>
           <li>
-            <a href="#">Administration</a>
+            <a href="?active=Administration">Administration</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="?active=About">About</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="?active=Contact">Contact</a>
           </li>
         </ul>
       </div>
