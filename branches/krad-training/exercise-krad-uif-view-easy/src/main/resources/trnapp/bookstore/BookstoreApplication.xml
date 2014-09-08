@@ -42,8 +42,9 @@
             <bean parent="Uif-HorizontalBoxGroup">
               <property name="items">
           	<list>
-		  <bean class="trnapp.bookstore.Card" p:labelText="Author Lookup" p:url="@{#ConfigProperties['application.url']}/kr-krad/lookup?methodToCall=start&amp;dataObjectClassName=trnapp.bookstore.Book&amp;showMaintenanceLinks=true" />
 		  <!--
+		      <bean class="trnapp.bookstore.Card" p:labelText="Author Lookup" p:url="@{#ConfigProperties['application.url']}/kr-krad/lookup?methodToCall=start&amp;dataObjectClassName=trnapp.bookstore.Book&amp;showMaintenanceLinks=true" />
+		  -->
           	      <bean parent="Uif-Space" />
 		      <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
 		      <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
@@ -51,7 +52,6 @@
 		      <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
 		      <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
 		      <bean parent="Uif-Link" p:href="http://www.google.com" p:linkText="Google"/>
-		  -->
 		  
 		</list>
 	      </property>
@@ -62,7 +62,7 @@
     </property>	 
   </bean>
 
-
+<!--
   <bean id="Uif-Card" parent="Uif-Card-parentBean" />
 
   <bean id="Uif-Card-parentBean" abstract="true" class="trnapp.bookstore.Card"
@@ -76,5 +76,5 @@
       </list>
     </property>
   </bean>
-
+-->
 </beans>

@@ -19,11 +19,6 @@
 
     <#if element.labelText?has_content>
         <#local label="${element.labelText}"/>
-        <#local colon=""/>
-
-        <#if element.renderColon>
-            <#local colon=":"/>
-        </#if>
 
         <div class="col-lg-4">
            <h2>${element.labelText}</h2>

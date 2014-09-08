@@ -24,11 +24,10 @@ public class LandingController extends UifControllerBase {
     }
     
     @RequestMapping("/landing")
-    public ModelAndView landing(@ModelAttribute("KualiForm") UifFormBase form, BindingResult result,
-				HttpServletRequest request, HttpServletResponse response) {		
+    public ModelAndView landing(@ModelAttribute("KualiForm") UifFormBase form, HttpServletRequest request, HttpServletResponse response) {		
 	form.setViewId(DEFAULT_VIEW_ID);
 	form.setView(KRADServiceLocatorWeb.getViewService().getViewById(DEFAULT_VIEW_ID));
 	form.setMethodToCall("start");
-	return start(form,  result, request, response);
+	return start(form, request, response);
     }
 }
