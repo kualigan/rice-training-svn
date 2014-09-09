@@ -19,12 +19,13 @@
 
     <#if element.labelText?has_content>
         <#local label="${element.labelText}"/>
+        <#local url="${element.url}"/>
 
         <div class="col-lg-4">
-           <h2>${element.labelText}</h2>
+           <h2>${label}</h2>
 
           <p>
-            <a class="btn btn-primary" href="${element.url}" role="button">View details »</a>
+            <a class="btn btn-primary" href="${url}" role="button">View details »</a>
           </p>
         </div>
     </#if>
