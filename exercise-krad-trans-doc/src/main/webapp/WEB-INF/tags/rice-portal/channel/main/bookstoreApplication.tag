@@ -22,6 +22,11 @@
   <ul class="chan">
       <li>
         <portal:portalLink displayTitle="true"
+                           title="Bookstore"
+                           url="${ConfigProperties.application.url}/"/>
+      </li>
+      <li>
+        <portal:portalLink displayTitle="true"
                            title="Author Lookup"
                            url="${ConfigProperties.application.url}/kr-krad/lookup?methodToCall=start&dataObjectClassName=trnapp.bookstore.Author&showMaintenanceLinks=true&returnLocation=${ConfigProperties.application.url}/portal.do"/>
       </li>
@@ -29,6 +34,10 @@
         <portal:portalLink displayTitle="true"
                            title="Book Lookup"
                            url="${ConfigProperties.application.url}/kr-krad/lookup?methodToCall=start&dataObjectClassName=trnapp.bookstore.Book&showMaintenanceLinks=true&returnLocation=${ConfigProperties.application.url}/portal.do"/>        
+      </li>
+      <li>
+        <portal:portalLink displayTitle="true" title="Book Order"
+                           url="${ConfigProperties.application.url}/kr-krad/bookOrder?methodToCall=docHandler&command=initiate&docTypeName=BookOrderDocumentType"/>        
       </li>      
   </ul>
 
