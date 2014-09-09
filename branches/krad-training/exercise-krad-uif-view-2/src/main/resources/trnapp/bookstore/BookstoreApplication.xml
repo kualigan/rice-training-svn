@@ -9,11 +9,14 @@
       <list>
         <value>http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css</value>
         <value>http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css</value>
+	<value>css/justified-nav.css</value>
+	<value>css/bookstore.css</value>
       </list>
     </property>
     <property name="additionalScriptFiles">
       <list>
         <value>http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js</value>
+        <value>scripts/bookstore.js</value>
       </list>
     </property>
     <property name="applicationHeader" ref="BookstoreHeader"/>
@@ -31,29 +34,57 @@
             p:template="/WEB-INF/ftl/bookstoreFooter.ftl"
             p:templateName="bookstore_footer"
             p:render="true"/>
-
+  
   <bean id="Landing" parent="BookstoreView">
     <property name="page">
-      <bean id="LandingPage" parent="Uif-Page">
-        <property name="items">
-          <list>
-          	<bean parent="Uif-VerticalBoxGroup">
-          		<property name="items">
-          			<list>
-          				<bean parent="Uif-Space" />
-						<bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
-						<bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
-						<bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
-						<bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
-						<bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
-						<bean parent="Uif-Link" p:href="http://www.google.com" p:linkText="Google"/>
-					</list>
-				</property>
-			</bean>
-          </list>
-        </property>         
+      <bean parent="Uif-Page">
+	<property name="cssClasses">
+	  <list>
+	    <value>container</value>
+	  </list>
+	</property>
+	<property name="items">
+	  <list>
+	    <ref bean="BookstoreApplication-Cards" />
+	  </list>
+	</property>
       </bean>
     </property>	 
   </bean>
 
+  <bean id="BookstoreApplication-Cards" parent="Uif-HorizontalBoxGroup">
+    <property name="cssClasses">
+      <list>
+	<value>row</value>
+      </list>
+    </property>
+    <property name="items">
+      <list>
+	<bean parent="Uif-Card" class="trnapp.bookstore.Card" p:labelText="Author Lookup" p:url="@{#ConfigProperties['application.url']}/kr-krad/lookup?methodToCall=start&amp;dataObjectClassName=trnapp.bookstore.Author&amp;showMaintenanceLinks=true" />
+	<bean parent="Uif-Card" class="trnapp.bookstore.Card" p:labelText="Book Lookup" p:url="@{#ConfigProperties['application.url']}/kr-krad/lookup?methodToCall=start&amp;dataObjectClassName=trnapp.bookstore.Book&amp;showMaintenanceLinks=true" />
+	<!--
+            <bean parent="Uif-Space" />
+	    <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
+	    <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
+	    <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
+	    <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
+	    <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
+	    <bean parent="Uif-Link" p:href="http://www.google.com" p:linkText="Google"/>
+	-->
+      </list>
+    </property>
+  </bean>
+  
+  <bean id="Uif-Card" parent="Uif-Card-parentBean" />
+
+  <bean id="Uif-Card-parentBean" abstract="true" class="trnapp.bookstore.Card"
+        parent="Uif-ContentElementBase" scope="prototype">
+    <property name="template" value="/WEB-INF/ftl/components/elements/card.ftl"/>
+    <property name="templateName" value="uif_card"/>
+    <property name="cssClasses">
+      <list>
+        <value>uif-card col-lg-4</value>
+      </list>
+    </property>
+  </bean>
 </beans>
