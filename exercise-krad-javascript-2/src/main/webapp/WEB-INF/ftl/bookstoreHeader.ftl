@@ -14,7 +14,7 @@
             <a href="?active=Store">Store</a>
           </li>
           <li>
-            <a href="?active=Administration">Administration</a>
+            <a href="/trnapp/portal.do?selectedTab=administration">Administration</a>
           </li>
           <li>
             <a href="?active=About">About</a>
