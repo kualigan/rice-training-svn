@@ -10,7 +10,7 @@
         <value>http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css</value>
         <value>http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css</value>
 	<value>css/justified-nav.css</value>
-	<value>css/bookstore2.css</value>
+	<value>css/bookstore.css</value>
       </list>
     </property>
     <property name="additionalScriptFiles">
