@@ -444,6 +444,12 @@
       <version>${rice.version}</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>org.kuali.rice</groupId>
+      <artifactId>rice-kns</artifactId>
+      <version>${rice.version}</version>
+      <scope>compile</scope>
+    </dependency>
     <!-- krms -->
     <dependency>
       <groupId>org.kuali.rice</groupId>
