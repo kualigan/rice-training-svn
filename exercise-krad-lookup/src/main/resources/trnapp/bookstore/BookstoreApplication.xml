@@ -10,6 +10,7 @@
         <value>http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css</value>
         <value>http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css</value>
 	<value>css/justified-nav.css</value>
+	<value>css/bookstore2.css</value>
       </list>
     </property>
     <property name="additionalScriptFiles">
@@ -33,7 +34,7 @@
             p:template="/WEB-INF/ftl/bookstoreFooter.ftl"
             p:templateName="bookstore_footer"
             p:render="true"/>
-
+  
   <bean id="Landing" parent="BookstoreView">
     <property name="page">
       <bean parent="Uif-Page">
@@ -59,7 +60,8 @@
     </property>
     <property name="items">
       <list>
-	<bean parent="Uif-Card" class="trnapp.bookstore.Card" p:labelText="Author Lookup" p:url="@{#ConfigProperties['application.url']}/kr-krad/lookup?methodToCall=start&amp;dataObjectClassName=trnapp.bookstore.Book&amp;showMaintenanceLinks=true" />
+	<bean parent="Uif-Card" class="trnapp.bookstore.Card" p:labelText="Author Lookup" p:url="@{#ConfigProperties['application.url']}/kr-krad/lookup?methodToCall=start&amp;dataObjectClassName=trnapp.bookstore.Author&amp;showMaintenanceLinks=true" />
+	<bean parent="Uif-Card" class="trnapp.bookstore.Card" p:labelText="Book Lookup" p:url="@{#ConfigProperties['application.url']}/kr-krad/lookup?methodToCall=start&amp;dataObjectClassName=trnapp.bookstore.Book&amp;showMaintenanceLinks=true" />
 	<!--
             <bean parent="Uif-Space" />
 	    <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
@@ -81,8 +83,7 @@
     <property name="templateName" value="uif_card"/>
     <property name="cssClasses">
       <list>
-        <value>uif-card</value>
-	<value>col-lg-4</value>
+        <value>uif-card col-lg-4</value>
       </list>
     </property>
   </bean>
