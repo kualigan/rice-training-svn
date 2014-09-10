@@ -62,15 +62,6 @@
       <list>
 	<bean parent="Uif-Card" class="trnapp.bookstore.Card" p:labelText="Author Lookup" p:url="@{#ConfigProperties['application.url']}/kr-krad/lookup?methodToCall=start&amp;dataObjectClassName=trnapp.bookstore.Author&amp;showMaintenanceLinks=true" />
 	<bean parent="Uif-Card" class="trnapp.bookstore.Card" p:labelText="Book Lookup" p:url="@{#ConfigProperties['application.url']}/kr-krad/lookup?methodToCall=start&amp;dataObjectClassName=trnapp.bookstore.Book&amp;showMaintenanceLinks=true" />
-	<!--
-            <bean parent="Uif-Space" />
-	    <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
-	    <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
-	    <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
-	    <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
-	    <bean parent="Uif-Link" p:href="http://www.kuali.org" p:linkText="Kuali Website"/>
-	    <bean parent="Uif-Link" p:href="http://www.google.com" p:linkText="Google"/>
-	-->
       </list>
     </property>
   </bean>
