@@ -12,6 +12,7 @@
             <value>classpath:trnapp/bookstore/Book.xml</value>
             <value>classpath:trnapp/bookstore/AuthorMaintenanceDocument.xml</value>
             <value>classpath:trnapp/bookstore/BookMaintenanceDocument.xml</value>
+            <value>classpath:trnapp/bookstore/BookstoreApplication.xml</value>
           </list>
         </property>
     
