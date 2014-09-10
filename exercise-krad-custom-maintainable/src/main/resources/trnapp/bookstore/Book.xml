@@ -124,7 +124,6 @@
     <property name="headerText" value="Book Lookup" />
     <property name="dataObjectClassName" value="trnapp.bookstore.Book" />
     <property name="viewHelperServiceClass" value="trnapp.bookstore.BookLookupable" />
-    <property name="showMaintenanceLinks" value="true" />
     <property name="criteriaFields">
       <list>
         <bean parent="Uif-LookupCriteriaInputField" p:propertyName="id" />
